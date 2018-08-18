@@ -15,4 +15,6 @@ RUN mkdir  /opt/run
 RUN echo "root:password" | chpasswd
 
 EXPOSE 22
+CMD ulimit -c unlimited
+CMD chmod 777 /opt/run/run.sh
 CMD /opt/run/run.sh
