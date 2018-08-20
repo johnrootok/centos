@@ -9,7 +9,6 @@ RUN mkdir  /opt/run
 
 RUN echo "root:password" | chpasswd
 WORKDIR /opt/run
-EXPOSE 22
 
-CMD ulimit -c unlimited && mv core core_`date "+%Y-%m-%d~%H-%M-%S"` && chmod 777 run.sh && ./run.sh
+CMD ulimit -c unlimited && chmod 777 run.sh && ./run.sh
 
