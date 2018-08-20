@@ -10,5 +10,5 @@ RUN mkdir  /opt/run
 RUN echo "root:password" | chpasswd
 WORKDIR /opt/run
 
-CMD ulimit -c unlimited && chmod 777 run.sh && ./run.sh
+CMD ulimit -c unlimited && pwd && chmod 777 run.sh && ./run.sh
 
